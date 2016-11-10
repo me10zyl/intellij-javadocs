@@ -4,6 +4,7 @@ import com.github.setial.intellijjavadocs.model.JavaDoc;
 import com.github.setial.intellijjavadocs.model.settings.JavaDocSettings;
 import com.github.setial.intellijjavadocs.model.settings.Level;
 import com.github.setial.intellijjavadocs.utils.JavaDocUtils;
+import com.github.setial.intellijjavadocs.utils.ParametersUtils;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiClass;
 import freemarker.template.Template;

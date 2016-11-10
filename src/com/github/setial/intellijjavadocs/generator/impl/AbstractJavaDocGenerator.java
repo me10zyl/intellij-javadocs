@@ -9,6 +9,7 @@ import com.github.setial.intellijjavadocs.model.settings.Visibility;
 import com.github.setial.intellijjavadocs.template.DocTemplateManager;
 import com.github.setial.intellijjavadocs.template.DocTemplateProcessor;
 import com.github.setial.intellijjavadocs.utils.JavaDocUtils;
+import com.github.setial.intellijjavadocs.utils.ParametersUtils;
 import com.intellij.openapi.components.ServiceManager;
 import com.intellij.openapi.project.Project;
 import com.intellij.pom.PomNamedTarget;
@@ -148,6 +149,7 @@ public abstract class AbstractJavaDocGenerator<T extends PsiElement> implements 
         params.put("name", getDocTemplateProcessor().buildDescription(element.getName(), true));
         params.put("partName", getDocTemplateProcessor().buildPartialDescription(element.getName()));
         params.put("splitNames", StringUtils.splitByCharacterTypeCamelCase(element.getName()));
+        ParametersUtils.setParameters(params);
         return params;
     }
 
